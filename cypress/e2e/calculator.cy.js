@@ -34,6 +34,14 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '4')
   })
 
+  it('should bee able to display positive numbers', () => {
+    cy.get('#number2').click();
+    cy.get('#operator_add').click();
+    cy.get('#number3').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('contain', '5')
+  })  
+
   it('should bee able to display negative numbers', () => {
     cy.get('#number2').click();
     cy.get('#operator_add').click();
